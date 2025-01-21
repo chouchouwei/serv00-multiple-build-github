@@ -10,12 +10,6 @@
 3. 设置3个端口：`Port reservation`→`Add port`，设置2个`tcp`、1个`udp`
 4. 注意：端口以你设置的为准，这里的端口仅是示例：即`tcp1`=`vless-reality`=`8675`、`tcp2`=`vmess-ws`=`8674`、`udp`=`hysteria2`=`8673`
 
-# 本地SSH部署脚本
-
-```
-bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/serv00.sh)
-```
-
 # Cloudflare的设置（须有个人域名）
 
 1. 网页登陆[Cloudflarel](https://dash.cloudflare.com/login)，并解析了你的个人域名
@@ -23,8 +17,14 @@ bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/ser
 3. CDN回源端口：点`规则`→`概述`→`更改端口` `Origin Rules`→`创建规则`，字段=`主机名`、运算符=`等于`、值=`完整的二级域名`，如`cdn.chek.us.kg`；`目标端口`重写到`tcp2`，如`8674`。IP与端口都设置好后，将获得`CDN回源域名`=`cdn.chek.us.kg`
 4. Argo固定隧道：在仪表首页，点`Zero Trust`→`Tunnels`→`添加隧道`→`选择 Cloudflare`，创建隧道，保存好`固定隧道密钥`，即是子域=二级域名`tm`、域=一级域名`chek.us.kg`，类型=`HTTP`，URL=`localhost:tcp2`，如`localhost:8674`或`127.0.0.1:8674`，设置完后将获得`argo固定隧道域名`=`tm.chek.us.kg`
 5. 注意，上面是以`chek.us.kg`为例，请按自己的个人域名为准，其中的`cdn`、`tm`并不是固定值，你可以随意命名，符合网址标准即可
+
+# 本地SSH脚本部署
+
+```
+bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/serv00.sh)
+```
     
-# Serv00多账号github自动部署+保活
+# Serv00多账号github线上部署+保活
 
 1. 登陆[github](https://github.com/login)账号，创建`Private`私有仓库，点`Actions`→`set up a workflow yourself `，将`.github/workflows/main.yml`文件里的代码拷贝过来，把你Serv00服务器的信息填上去，点`Commit changes`保存。
 2. 点`Actions`→`Keep Servers Alive`→`Run workflow`手动运行一次
