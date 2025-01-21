@@ -1,3 +1,9 @@
+# Serv00本地SSH部署脚本
+```
+bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/serv00.sh)
+```
+# Serv00多账号github自动部署
+1. RES：`n`表示每次不
 # serv00变量规则
 1. RES：`n`表示每次不重置部署，`y`表示每次重置部署
 2. SSH_USER：表示用户名，如：`SosaYe`
@@ -17,7 +23,4 @@
 3. 443系端口：`443`、`8443`、`2053`、`2083`、`2087`、`2096`
 # Serv00的IP
 1. 见`serv00的IP.csv`文件，后期不定期更新
-# Serv00本地SSH部署脚本
-```
-bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/serv00.sh)
-```
+
