@@ -1,3 +1,7 @@
+# Serv00一键三协议脚本
+1. 支持一键三协议：vless-reality、vmess-ws(argo)、hysteria2
+2. 生成Proxyip+反代IP，支持Argo临时/固定隧道及CDN回源
+
 # Serv00本地SSH部署脚本
 ```
 bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/serv00.sh)
