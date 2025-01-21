@@ -7,7 +7,7 @@
 bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/serv00.sh)
 ```
 # 多账号github自动部署
-1. 打开`[vps panel(https://panel16.serv00.com/)`
+1. 打开[vps panel(https://panel16.serv00.com/)
    
 # serv00变量规则
 1. RES：`n`表示每次不重置部署，`y`表示每次重置部署
