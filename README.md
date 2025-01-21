@@ -1,6 +1,6 @@
 # Serv00一键三协议脚本
 1. 支持一键三协议：vless-reality、vmess-ws(argo)、hysteria2
-2. 生成Proxyip+反代IP，支持Argo临时/固定隧道及CDN回源
+2. 生成`Proxyip`、`反代IP`，支持`Argo临时隧道`、`Argo固定隧道`、`CDN回源`
 
 # 本地SSH部署脚本
 ```
@@ -13,7 +13,11 @@ bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/ser
 4. 登陆[github](https://github.com/login)账号，创建`Private`私有仓库，点`Actions`→`set up a workflow yourself `，将`.github/workflows/main.yml`文件里的代码拷贝过来，把你Serv00服务器的信息填上去，点`Commit changes`保存。
 5. 点`Actions`→`Keep Servers Alive`→`Run workflow`手动运行一次
 
-   
+# Cloudflare设置
+1. 网页登陆[Cloudflarel](https://dash.cloudflare.com/login)，并解析了你的个人域名
+2. CDN回源IP：点`个人域名`→`DNS`→`添加记录`，增加一个A类型为你的二级域名`cdn`，指向到你的Serv00分配给你的IP，如`188.68.240.161`，将获得完整的二级域名，如`cdn.chek.us.kg`
+3. CDN回源端口：点`规则`→`概述`→`更改端口` `Origin Rules`→`创建规则`，字段=`主机名`、运算符=`等于`、值=`完整的二级域名`，如`cdn.chek.us.kg`；`目标端口`重写到`TCP2_PORT`，如`8674`
+    
 # serv00变量规则
 1. RES：`n`表示每次不重置部署，`y`表示每次重置部署
 2. SSH_USER：表示用户名，如：`SosaYe`
@@ -27,7 +31,7 @@ bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/ser
 10. ARGO_DOMAIN：argo固定域名，如`tm.chok.us.kg`；argo临时域名,如`""`
 11. ARGO_AUTH：argo固定域名token，如：`eyJhIjoiOTM3YzFj...dVeCJ9`；argo临时域名token，如：`""`
 12. 每行一个`serv00服务器`，末尾用`,`间隔，最后一个服务器不用`,`
-    
+
 # Cloudflare优选域名
 1. 见`CF优选域名.csv`文件，后期不定期更新
 2. 80系端口：`80`、`8080`、`8880`、`2052`、`2082`、`2086`、`2095`
