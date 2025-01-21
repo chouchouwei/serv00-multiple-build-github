@@ -18,7 +18,8 @@ bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/ser
 1. 网页登陆[Cloudflarel](https://dash.cloudflare.com/login)，并解析了你的个人域名
 2. CDN回源IP：点`个人域名`→`DNS`→`添加记录`，增加一个`A类型`=二级域名`cdn`，指向到你的Serv00分配给你的IP，如`188.68.240.161`，将获得完整的二级域名，如`cdn.chek.us.kg`
 3. CDN回源端口：点`规则`→`概述`→`更改端口` `Origin Rules`→`创建规则`，字段=`主机名`、运算符=`等于`、值=`完整的二级域名`，如`cdn.chek.us.kg`；`目标端口`重写到`tcp2`，如`8674`
-4. Argo固定隧道：在仪表首页，点`Zero Trust`→`Tunnels`→`添加隧道`→`选择 Cloudflare`，创建隧道，子域=二级域名`tm`、域=一级域名`chek.us.kg`，将获得`argo固定隧道域名`=`tm.chek.us.kg`，类型=`HTTP`，URL=`localhost:tcp2`，如`localhost:8674`或`127.0.0.1:8674`
+4. Argo固定隧道：在仪表首页，点`Zero Trust`→`Tunnels`→`添加隧道`→`选择 Cloudflare`，创建隧道，保存好`固定隧道密钥`，即是子域=二级域名`tm`、域=一级域名`chek.us.kg`，将获得`argo固定隧道域名`=`tm.chek.us.kg`，类型=`HTTP`，URL=`localhost:tcp2`，如`localhost:8674`或`127.0.0.1:8674`
+5. 注意，上面是以`chek.us.kg`为例，请按自己的个人域名为准，其中的`cdn``tm`并不是固定值，你可以随意命名，符合网址标准即可
     
 # serv00变量规则
 1. RES：`n`表示每次不重置部署，`y`表示每次重置部署
