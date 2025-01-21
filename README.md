@@ -2,11 +2,11 @@
 1. 支持一键三协议：vless-reality、vmess-ws(argo)、hysteria2
 2. 生成Proxyip+反代IP，支持Argo临时/固定隧道及CDN回源
 
-# Serv00本地SSH部署脚本
+# 本地SSH部署脚本
 ```
 bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/serv00.sh)
 ```
-# Serv00多账号github自动部署
+# 多账号github自动部署
 1. Fork本仓库，：`n`表示每次不
    
 # serv00变量规则
@@ -32,4 +32,4 @@ bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/ser
 1. 见`serv00的IP.csv`文件，后期不定期更新
    
 # 特别感谢
-[yonggekkk](https://github.com/yonggekkk/sing-box-yg)
+[yonggekkk](https://github.com/yonggekkk/)
