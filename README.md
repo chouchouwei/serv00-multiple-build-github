@@ -20,7 +20,7 @@ bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/ser
 1. 登陆[github](https://github.com/login)账号，创建`Private`私有仓库，点`Actions`→`set up a workflow yourself `，将`.github/workflows/main.yml`文件里的代码拷贝过来，把你Serv00服务器的信息填上去，点`Commit changes`保存。
 2. 点`Actions`→`Keep Servers Alive`→`Run workflow`手动运行一次
 
-# Cloudflare设置
+# Cloudflare的设置（须有个人域名）
 
 1. 网页登陆[Cloudflarel](https://dash.cloudflare.com/login)，并解析了你的个人域名
 2. CDN回源IP：点`个人域名`→`DNS`→`添加记录`，增加一个`A类型`=二级域名`cdn`，指向到你的Serv00分配给你的IP，如`188.68.240.161`，关闭小橙云`代理状态`，将获得完整的二级域名，如`cdn.chek.us.kg`
