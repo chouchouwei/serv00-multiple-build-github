@@ -10,3 +10,4 @@
 9. HOST：表示登录服务器域名，如`s14.serv00.com`
 10. ARGO_DOMAIN：argo固定域名，如`tm.chok.us.kg`；argo临时域名,如`""`
 11. ARGO_AUTH：argo固定域名token，如：`eyJhIjoiOTM3YzFj...dVeCJ9`；argo临时域名token，如：`""`
+12. 每行一个`serv00服务器`，末尾用`,`间隔，最后一个服务器不用`,`
