@@ -7,7 +7,8 @@
 
 1. 网页登陆[vps panel](https://panel14.serv00.com/)，如你的是S16服务器，请将网址中的 panel14 改`panel16`
 2. 启用运行软件权限：`Additional services`→`Run your own applications`→`Status Enabled`
-3. 设置3个端口：`Port reservation`→`Add port`，设置2个`tcp`、1个`udp`，即`tcp1`=`vless-reality`、`tcp2`=`vmess-ws`、`udp`=`hysteria2`
+3. 设置3个端口：`Port reservation`→`Add port`，设置2个`tcp`、1个`udp`
+4. 注意：端口以你设置的为准，这里的端口仅是示例：即`tcp1`=`vless-reality`=`8675`、`tcp2`=`vmess-ws`=`8674`、`udp`=`hysteria2`=`8673`
 
 # 本地SSH部署脚本
 
