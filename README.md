@@ -9,4 +9,4 @@
 8. `UDP_PORT`：表示hy2的udp端口，即第三次输入的端口
 9. `HOST`：表示登录服务器域名，如`s14.serv00.com`
 10. `ARGO_DOMAIN`：argo固定域名，如`tm.chok.us.kg`；argo临时域名,如`""`
-11. `ARGO_AUTH`：argo固定域名token，如：```eyJhIjoiOTM3YzFjYWI88552NTFiYTM4ZTY0ZDQzMWRhOTgyNzkiLCJ0IjoiYjI1MDc5MDktMWQzMS00MWNmLWI1N2QtYTkxNGIxOTAzOTExIiwicyI6Ik9XTmxNR1F6WkRRdE56a3dNaTAwWlRaakxXRmlNelF0TkRBd1pUQTRNVEJqTUdVeCJ9```
+11. `ARGO_AUTH`：argo固定域名token，如：`eyJhIjoiOTM3YzFj...dVeCJ9`；argo临时域名token，如：`""`
