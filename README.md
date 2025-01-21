@@ -10,7 +10,7 @@ bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/ser
 1. 网页打开[vps panel](https://panel14.serv00.com/)，如你的是S16服务器，请将网址中的 panel14 改`panel16`，登陆账号
 2. 启用运行软件权限：`Additional services`→`Run your own applications`→`Status Enabled`
 3. 设置3个端口：`Port reservation`→`Add port`，设置2个`tcp`、`udp`
-4. 登陆github账号，`创建`Private`私有仓库，点`Actions`→`set up a workflow yourself `，将.github/workflows`main.yml`文件里的代码拷贝过来，
+4. 登陆github账号，创建`Private`私有仓库，点`Actions`→`set up a workflow yourself `，将`.github/workflows/main.yml`文件里的代码拷贝过来。
 
    
 # serv00变量规则
