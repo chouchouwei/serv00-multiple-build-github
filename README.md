@@ -16,11 +16,6 @@
 bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/serv00.sh)
 ```
 
-# 多账号github自动部署+保活
-
-1. 登陆[github](https://github.com/login)账号，创建`Private`私有仓库，点`Actions`→`set up a workflow yourself `，将`.github/workflows/main.yml`文件里的代码拷贝过来，把你Serv00服务器的信息填上去，点`Commit changes`保存。
-2. 点`Actions`→`Keep Servers Alive`→`Run workflow`手动运行一次
-
 # Cloudflare的设置（须有个人域名）
 
 1. 网页登陆[Cloudflarel](https://dash.cloudflare.com/login)，并解析了你的个人域名
@@ -29,7 +24,12 @@ bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/ser
 4. Argo固定隧道：在仪表首页，点`Zero Trust`→`Tunnels`→`添加隧道`→`选择 Cloudflare`，创建隧道，保存好`固定隧道密钥`，即是子域=二级域名`tm`、域=一级域名`chek.us.kg`，类型=`HTTP`，URL=`localhost:tcp2`，如`localhost:8674`或`127.0.0.1:8674`，设置完后将获得`argo固定隧道域名`=`tm.chek.us.kg`
 5. 注意，上面是以`chek.us.kg`为例，请按自己的个人域名为准，其中的`cdn`、`tm`并不是固定值，你可以随意命名，符合网址标准即可
     
-# serv00变量规则
+# Serv00多账号github自动部署+保活
+
+1. 登陆[github](https://github.com/login)账号，创建`Private`私有仓库，点`Actions`→`set up a workflow yourself `，将`.github/workflows/main.yml`文件里的代码拷贝过来，把你Serv00服务器的信息填上去，点`Commit changes`保存。
+2. 点`Actions`→`Keep Servers Alive`→`Run workflow`手动运行一次
+   
+# github自动部署变量规则
 
 1. RES：`n`表示每次不重置部署，`y`表示每次重置部署
 2. SSH_USER：表示用户名，如：`SosaYe`
