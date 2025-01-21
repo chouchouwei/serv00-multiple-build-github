@@ -3,6 +3,12 @@
 1. 支持一键三协议：vless-reality、vmess-ws(argo)、hysteria2
 2. 生成`Proxyip`、`反代IP`，支持`Argo临时隧道`、`Argo固定隧道`、`CDN回源`
 
+# 部署前须设置
+
+1. 网页登陆[vps panel](https://panel14.serv00.com/)，如你的是S16服务器，请将网址中的 panel14 改`panel16`
+2. 启用运行软件权限：`Additional services`→`Run your own applications`→`Status Enabled`
+3. 设置3个端口：`Port reservation`→`Add port`，设置2个`tcp`、1个`udp`，即`tcp1`=`vless-reality`、`tcp2`=`vmess-ws`、`udp`=`hysteria2`
+
 # 本地SSH部署脚本
 
 ```
@@ -11,11 +17,8 @@ bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/ser
 
 # 多账号github自动部署+保活
 
-1. 网页登陆[vps panel](https://panel14.serv00.com/)，如你的是S16服务器，请将网址中的 panel14 改`panel16`
-2. 启用运行软件权限：`Additional services`→`Run your own applications`→`Status Enabled`
-3. 设置3个端口：`Port reservation`→`Add port`，设置2个`tcp`、1个`udp`，即`tcp1`=`vless-reality`、`tcp2`=`vmess-ws`、`udp`=`hysteria2`
-4. 登陆[github](https://github.com/login)账号，创建`Private`私有仓库，点`Actions`→`set up a workflow yourself `，将`.github/workflows/main.yml`文件里的代码拷贝过来，把你Serv00服务器的信息填上去，点`Commit changes`保存。
-5. 点`Actions`→`Keep Servers Alive`→`Run workflow`手动运行一次
+1. 登陆[github](https://github.com/login)账号，创建`Private`私有仓库，点`Actions`→`set up a workflow yourself `，将`.github/workflows/main.yml`文件里的代码拷贝过来，把你Serv00服务器的信息填上去，点`Commit changes`保存。
+2. 点`Actions`→`Keep Servers Alive`→`Run workflow`手动运行一次
 
 # Cloudflare设置
 
