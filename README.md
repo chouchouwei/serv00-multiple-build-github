@@ -11,3 +11,13 @@
 10. ARGO_DOMAIN：argo固定域名，如`tm.chok.us.kg`；argo临时域名,如`""`
 11. ARGO_AUTH：argo固定域名token，如：`eyJhIjoiOTM3YzFj...dVeCJ9`；argo临时域名token，如：`""`
 12. 每行一个`serv00服务器`，末尾用`,`间隔，最后一个服务器不用`,`
+# Cloudflare优选域名
+1. 见`CF优选域名.csv`文件，后期不定期更新
+2. 80系端口：`80`、`8080`、`8880`、`2052`、`2082`、`2086`、`2095`
+3. 443系端口：`443`、`8443`、`2053`、`2083`、`2087`、`2096`
+# Serv00的IP
+1. 见`serv00的IP.csv`文件，后期不定期更新
+# Serv00本地SSH部署脚本
+```
+bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/serv00.sh)
+```
