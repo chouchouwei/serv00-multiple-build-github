@@ -1,2 +1,3 @@
-# serv00-multiple-build-github
-serv00多个账号在github自动部署及保活
+# serv00变量规则
+1. RES：'n'表示每次不重置部署，'y'表示每次重置部署
+2. 
