@@ -9,7 +9,7 @@ bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/ser
 # 多账号github自动部署+保活
 1. 网页登陆[vps panel](https://panel14.serv00.com/)，如你的是S16服务器，请将网址中的 panel14 改`panel16`
 2. 启用运行软件权限：`Additional services`→`Run your own applications`→`Status Enabled`
-3. 设置3个端口：`Port reservation`→`Add port`，设置2个`tcp`、1个`udp`,即tcp1=`vless-reality`、tcp2=`vmess-ws`、UDP=`hysteria2`
+3. 设置3个端口：`Port reservation`→`Add port`，设置2个`tcp`、1个`udp`,即`tcp1`=`vless-reality`、`tcp2`=`vmess-ws`、`udp`=`hysteria2`
 4. 登陆[github](https://github.com/login)账号，创建`Private`私有仓库，点`Actions`→`set up a workflow yourself `，将`.github/workflows/main.yml`文件里的代码拷贝过来，把你Serv00服务器的信息填上去，点`Commit changes`保存。
 5. 点`Actions`→`Keep Servers Alive`→`Run workflow`手动运行一次
 
@@ -18,7 +18,7 @@ bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/ser
 1. 网页登陆[Cloudflarel](https://dash.cloudflare.com/login)，并解析了你的个人域名
 2. CDN回源IP：点`个人域名`→`DNS`→`添加记录`，增加一个`A类型`=二级域名`cdn`，指向到你的Serv00分配给你的IP，如`188.68.240.161`，将获得完整的二级域名，如`cdn.chek.us.kg`
 3. CDN回源端口：点`规则`→`概述`→`更改端口` `Origin Rules`→`创建规则`，字段=`主机名`、运算符=`等于`、值=`完整的二级域名`，如`cdn.chek.us.kg`；`目标端口`重写到`tcp2`，如`8674`
-4. Argo固定隧道：在仪表首页，点`Zero Trust`→`Tunnels`→`添加隧道`→`选择 Cloudflare`，创建隧道，子域=二级域名`tm`、域=一级域名`chek.us.kg`，将获得完整的二级域名，如`tm.chek.us.kg`，类型=`HTTP`，URL=`localhost:8674`，这里的8674=`tcp2`
+4. Argo固定隧道：在仪表首页，点`Zero Trust`→`Tunnels`→`添加隧道`→`选择 Cloudflare`，创建隧道，子域=二级域名`tm`、域=一级域名`chek.us.kg`，将获得完整的二级域名，如`tm.chek.us.kg`，类型=`HTTP`，URL=`localhost:tcp2`，如`localhost:8674`或`127.0.0.1:8674`
     
 # serv00变量规则
 1. RES：`n`表示每次不重置部署，`y`表示每次重置部署
@@ -26,9 +26,9 @@ bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/ser
 3. SSH_PASS：表示serv00的登陆密码，如：`abc123`
 4. REALITY：表示reality域名，如：`www.speedtest.net`、`www.wto.org`、`time.is`，`用户名.serv00.net`
 5. SUUID：表示`uuid`，[在线生成](https://1024tools.com/uuid)
-6. TCP1_PORT：表示vless的`tcp`端口，即第1次输入`tcp1`，如：`8675`
-7. TCP2_PORT：表示vmess的`tcp`端口，即第2次输入`tcp2`，如：`8674`
-8. UDP_PORT：表示hy2的`udp`端口，即第3次输入`UDP`，如：`8673`
+6. TCP1_PORT：表示vless的`tcp1`端口，即第1次输入的端口，如：`8675`
+7. TCP2_PORT：表示vmess的`tcp2`端口，即第2次输入的端口，如：`8674`
+8. UDP_PORT：表示hy2的`udp`端口，即第3次输入的端口，如：`8673`
 9. HOST：表示登录服务器域名，如`s14.serv00.com`
 10. ARGO_DOMAIN：argo固定域名，如`tm.chok.us.kg`；argo临时域名,如`""`
 11. ARGO_AUTH：argo固定域名token，如：`eyJhIjoiOTM3YzFj...dVeCJ9`；argo临时域名token，如：`""`
