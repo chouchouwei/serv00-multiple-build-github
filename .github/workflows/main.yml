@@ -16,7 +16,7 @@ jobs:
         [
         {"RES":"n", "SSH_USER":"用户名", "SSH_PASS":"密码", "REALITY":"reality域名", "SUUID":"uuid", "TCP1_PORT":"vless的tcp端口", "TCP2_PORT":"vmess的tcp端口", "UDP_PORT":"hy2的udp端口", "HOST":"登录域名", "ARGO_DOMAIN":"argo固定域名，临时域名留空", "ARGO_AUTH":"argo固定域名token，临时域名留空"},
         {"RES":"n", "SSH_USER":"Setout", "SSH_PASS":"cba321", "REALITY":"time.is", "SUUID":"3a69c2de-cd79-4ff5-87dc-dacao0c74724", "TCP1_PORT":"2173", "TCP2_PORT":"2174", "UDP_PORT":"2175", "HOST":"s15.serv00.com", "ARGO_DOMAIN":"", "ARGO_AUTH":""},
-        {"RES":"y", "SSH_USER":"SosaYe", "SSH_PASS":"abc123", "REALITY":"www.speedtest.net", "SUUID":"b9187aab-ea80-474a-a6bf-32fdae82ab3e", "TCP1_PORT":"8675", "TCP2_PORT":"8674", "UDP_PORT":"8673", "HOST":"s14.serv00.com", "ARGO_DOMAIN":"tm.chek.us.kg", "ARGO_AUTH":"eyJhIjoiMzIzYThjNjZnNmNhNzFhZTM3YWJkYjRjOWFkOGNjYTAiLCJ0IjoiNDQzNjIyZGMtMmI1OS00MDdhLTg1NTcoZTMwMjJmYmU4ZmZjIiwicyI6Ik5EWmyOV1V6TUdNdFpUTXdOUzAwWTJOaExUZzNZgGt0TURRMll6UTJaRFJrTURJMiJ9"},
+        {"RES":"y", "SSH_USER":"SosaYe", "SSH_PASS":"abc123", "REALITY":"www.speedtest.net", "SUUID":"b9187aab-ea80-474a-a6bf-32fdae82ab3e", "TCP1_PORT":"8675", "TCP2_PORT":"8674", "UDP_PORT":"8673", "HOST":"s14.serv00.com", "ARGO_DOMAIN":"tm.chek.us.kg", "ARGO_AUTH":"eyJhIjoiMzIzYThjNjZnNmNhNzFhZTM3YWJkYjRjOWFkOGNjYTAiLCJ0IjoiNDQzNjIyZGMtMmI1OS00MDdhLTg1NTcoZTMwMjJmYmU4ZmZjIiwicyI6Ik5EWmyOV1V6TUdNdFpUTXdOUzAwWTJOaExUZzNZgGt0TURRMll6UTJaRFJrTURJMiJ9"}
         ]
     steps:
       - name: Checkout Repository
