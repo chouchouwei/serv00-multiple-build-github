@@ -28,7 +28,8 @@ bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/ser
 
 1. 登陆[github](https://github.com/login)账号，创建`Private`私有仓库，点`Actions`→`set up a workflow yourself `，将`main.yml`文件里的代码拷贝过来，把你Serv00服务器的信息填上去，点`Commit changes`保存。
 2. 点`Actions`→`Keep Servers Alive`→`Run workflow`手动运行一次
-3. 不要删掉`.github/workflows/main.yml`工作流文件，它会每4小时自动运行一次
+3. 部署完后的服务器，请将RES：`y`改为`n`，保存文件。以后该服务器将会不重置部署，就是于保活
+4. 不要删掉`.github/workflows/main.yml`工作流文件，它会每4小时自动运行一次
    
 # github自动部署变量规则
 
