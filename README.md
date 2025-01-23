@@ -26,7 +26,7 @@ bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/ser
     
 # Serv00多账号github线上部署+保活[视频教程](https://youtu.be/22dRx8uf91k)
 
-1. 登陆[github](https://github.com/login)账号，创建`Private`私有仓库，点`Actions`→`set up a workflow yourself `，将`.github/workflows/main.yml`文件里的代码拷贝过来，把你Serv00服务器的信息填上去，点`Commit changes`保存。
+1. 登陆[github](https://github.com/login)账号，创建`Private`私有仓库，点`Actions`→`set up a workflow yourself `，将`main.yml`文件里的代码拷贝过来，把你Serv00服务器的信息填上去，点`Commit changes`保存。
 2. 点`Actions`→`Keep Servers Alive`→`Run workflow`手动运行一次
    
 # github自动部署变量规则
